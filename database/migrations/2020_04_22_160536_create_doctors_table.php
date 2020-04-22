@@ -16,6 +16,7 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('doctortype_id')->unsigned()->nullable(false);
+            $table->bigInteger('upazilla_id')->unsigned();
             $table->string('name')->nullable(false);
             $table->string('bmdc_number')->nullable(false);
             $table->integer('status')->default(0); //0 available, 1 busy, 2 in call
@@ -24,6 +25,8 @@ class CreateDoctorsTable extends Migration
             $table->timestamps();
 
             $table->foreign('doctortype_id')->references('id')->on('doctortypes')
+                ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('upazilla_id')->references('id')->on('upazillas')
                 ->onUpdate('cascade')->onDelete('cascade');
         });
     }

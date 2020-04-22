@@ -15,10 +15,15 @@ class CreatePatientsTable extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('upazilla_id')->unsigned();
+
             $table->string('name')->nullable(false);
             $table->string('mobile')->nullable(false);
             $table->string('password')->nullable(false);
             $table->timestamps();
+
+            $table->foreign('upazilla_id')->references('id')->on('upazillas')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
