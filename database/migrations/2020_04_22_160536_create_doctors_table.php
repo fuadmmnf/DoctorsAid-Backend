@@ -21,6 +21,7 @@ class CreateDoctorsTable extends Migration
             $table->string('bmdc_number')->nullable(false);
             $table->integer('status')->default(0); //0 available, 1 busy, 2 in call
             $table->string('mobile')->nullable(false);
+            $table->string('device_id');
             $table->string('password')->nullable(false);
             $table->timestamps();
 

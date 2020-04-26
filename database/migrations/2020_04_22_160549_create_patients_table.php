@@ -19,6 +19,7 @@ class CreatePatientsTable extends Migration
 
             $table->string('name')->nullable(false);
             $table->string('mobile')->nullable(false);
+            $table->string('device_id');
             $table->string('password')->nullable(false);
             $table->timestamps();
 

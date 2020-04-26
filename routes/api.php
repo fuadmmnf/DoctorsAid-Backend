@@ -19,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::apiResource('doctortypes', 'API\DoctorTypesController');
 Route::apiResource('patients', 'API\PatientController');
+
+Route::apiResource('doctors', 'API\DoctorController');
+Route::get('doctortypes/{doctortype_id}/doctors/available', 'API\DoctorController@getSingleAvailableDoctorByType');
