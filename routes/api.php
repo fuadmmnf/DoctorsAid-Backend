@@ -17,8 +17,13 @@ use Illuminate\Support\Facades\Route;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+Route::post('authenticate', 'AuthController@authenticateUser');
+
+
 Route::apiResource('doctortypes', 'API\DoctorTypesController');
 Route::apiResource('patients', 'API\PatientController');
 
 Route::apiResource('doctors', 'API\DoctorController');
 Route::get('doctortypes/{doctortype_id}/doctors/available', 'API\DoctorController@getSingleAvailableDoctorByType');
+
+
