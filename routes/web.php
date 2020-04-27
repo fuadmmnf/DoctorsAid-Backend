@@ -18,7 +18,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+// Auth::routes(['register' => false]);
 
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+Route::get('/dashboard', ['as'=>'dashboard','uses'=>'DashboardController@index']);

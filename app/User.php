@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Auth\Authenticatable as AuthenticableTrait;
-use Zizaco\Entrust\Traits\EntrustUserTrait;
+// use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 use Eloquent;
 
@@ -14,7 +14,7 @@ class User extends Authenticatable
 {
     use Notifiable;
     use AuthenticableTrait;
-    use EntrustUserTrait;
+    // use EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
