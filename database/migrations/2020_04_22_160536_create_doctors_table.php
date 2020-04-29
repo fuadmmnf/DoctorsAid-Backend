@@ -19,8 +19,17 @@ class CreateDoctorsTable extends Migration
             $table->bigInteger('upazilla_id')->unsigned();
             $table->string('name')->nullable(false);
             $table->string('bmdc_number')->nullable(false);
+            $table->integer('activation_status')->default(0); //0 pending, 1 activated
             $table->integer('status')->default(0); //0 available, 1 busy, 2 in call
+            $table->integer('gender');
             $table->string('mobile')->nullable(false);
+            $table->string('email')->nullable(false);
+            $table->string('workplace')->nullable();
+            $table->string('designation')->nullable();
+            $table->string('postgrad')->nullable();
+            $table->string('medical_college')->nullable();
+            $table->string('others_training')->nullable();
+
             $table->string('device_id');
             $table->string('password')->nullable(false);
             $table->timestamps();
