@@ -30,7 +30,6 @@ class DoctorController extends Controller
             'mobile' => 'required| min:11',
             'password' => 'required| min:8',
             'bmdc_number' => 'required',
-            'device_id' => 'required',
         ]);
 
         $newDoctor = new Doctor();
@@ -38,7 +37,6 @@ class DoctorController extends Controller
         $newDoctor->name = $request->name;
         $newDoctor->mobile = $request->mobile;
         $newDoctor->bmdc_number = $request->bmdc_number;
-        $newDoctor->device_id = $request->device_id;
         $newDoctor->password = Hash::make($request->password);
         $newDoctor->save();
 

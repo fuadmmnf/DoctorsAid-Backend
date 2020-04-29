@@ -30,7 +30,7 @@ class CreateDoctorsTable extends Migration
             $table->string('medical_college')->nullable();
             $table->string('others_training')->nullable();
 
-            $table->string('device_id');
+            $table->string('device_id')->nullable(true);
             $table->string('password')->nullable(false);
             $table->timestamps();
 
