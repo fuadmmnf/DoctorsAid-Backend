@@ -34,6 +34,7 @@ class DoctorController extends Controller
         ]);
 
         $newDoctor = new Doctor();
+        $newDoctor->upazilla_id = 1;
         $newDoctor->name = $request->name;
         $newDoctor->mobile = $request->mobile;
         $newDoctor->bmdc_number = $request->bmdc_number;

@@ -11,7 +11,7 @@ class DoctorTypesController extends Controller
 
     public function index()
     {
-        $doctorTypes = Doctortype::all();
+        $doctorTypes = Doctortype::withCount('doctors')->get();
         return response()->json($doctorTypes);
     }
 

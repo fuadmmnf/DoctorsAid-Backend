@@ -24,13 +24,15 @@ class AuthController extends Controller
             $user = Doctor::where('mobile', $request->mobile)
                 ->where('password', Hash::make($request->password))
                 ->first();
-//            $user->is_doctor = true;
         }
-        $user->isDoctor = false;
 
-        if($user)
+        if($user){
+            $user->device_id = $request->deviceId;
+            $user->save();
             return response()->json($user, 200);
-        else
+        }
+        else{
             return response()->json('Bad Credentials', 401);
+        }
     }
 }

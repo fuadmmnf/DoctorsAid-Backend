@@ -24,15 +24,16 @@ class PatientController extends Controller
             'password' => 'required| min:8',
             'device_id' => 'required',
         ]);
-
+        
         $newPatient = new Patient();
+        $newPatient->upazilla_id = 1;
         $newPatient->name = $request->name;
         $newPatient->mobile = $request->mobile;
         $newPatient->password = Hash::make($request->password);
         $newPatient->device_id = $request->device_id;
         $newPatient->save();
 
-        return response()->json($newPatient);
+        return response()->json($newPatient, 201);
     }
 
 
