@@ -18,7 +18,7 @@ class CreatePatientsTable extends Migration
             $table->bigInteger('upazilla_id')->unsigned()->index();
 
             $table->string('name')->nullable(false);
-            $table->string('mobile')->nullable(false);
+            $table->string('mobile')->nullable(false)->unique();
             $table->string('device_id');
             $table->string('password')->nullable(false);
             $table->timestamps();

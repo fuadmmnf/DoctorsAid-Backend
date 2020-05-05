@@ -16,20 +16,22 @@ class AuthController extends Controller
             'device_id' => 'required',
         ]);
 
-        $user = Patient::where('mobile', $request->mobile)
-            ->where('password', Hash::make($request->password))
-            ->first();
+        // dd(Hash::check($request->password, Hash::make($request->password)));
 
-        if(!$user){
-            $user = Doctor::where('mobile', $request->mobile)
-                ->where('password', Hash::make($request->password))
-                ->first();
+        $authUser = Patient::where('mobile', $request->mobile)->first();
+
+        if($authUser == null){
+            $authUser = Doctor::where('mobile', $request->mobile)->first();
+
         }
 
-        if($user){
-            $user->device_id = $request->deviceId;
-            $user->save();
-            return response()->json($user, 200);
+        if($authUser != null){
+            if(Hash::check($request->password, $authUser->password)){
+                $authUser->device_id = $request->device_id;
+                $authUser->save();
+                // dd($authUser);
+                return response()->json($authUser, 200);
+            }       
         }
         else{
             return response()->json('Bad Credentials', 401);
