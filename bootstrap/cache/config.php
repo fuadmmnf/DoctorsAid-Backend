@@ -275,7 +275,7 @@
   ),
   'app' => 
   array (
-    'name' => 'Doctors\'-Aid',
+    'name' => 'Laravel',
     'env' => 'local',
     'debug' => true,
     'url' => 'http://localhost',
@@ -284,7 +284,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:Uc1mbHPbjV2Y/6hxUh+i71IX+roOGWdvuPkhfT/Dz40=',
+    'key' => 'base64:sWdSD7faWwUZ0PeVb5JSJDxnpl+9Lc1+VbKGYJRu6rE=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -451,7 +451,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/framework/cache/data',
+        'path' => 'C:\\wamp\\www\\doctors_aid\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -490,7 +490,7 @@
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'doctors_aid_cache',
+    'prefix' => 'laravel_cache',
   ),
   'cors' => 
   array (
@@ -528,7 +528,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'doctors\'_aid',
+        'database' => 'doctors_aid',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -538,7 +538,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'doctors\'_aid',
+        'database' => 'doctors_aid',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -558,7 +558,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'doctors\'_aid',
+        'database' => 'doctors_aid',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -573,7 +573,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'doctors\'_aid',
+        'database' => 'doctors_aid',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -588,7 +588,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'doctors_aid_database_',
+        'prefix' => 'laravel_database_',
       ),
       'default' => 
       array (
@@ -617,12 +617,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/app',
+        'root' => 'C:\\wamp\\www\\doctors_aid\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/app/public',
+        'root' => 'C:\\wamp\\www\\doctors_aid\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -639,7 +639,7 @@
     ),
     'links' => 
     array (
-      '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/public/storage' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/app/public',
+      'C:\\wamp\\www\\doctors_aid\\public\\storage' => 'C:\\wamp\\www\\doctors_aid\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -673,13 +673,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/logs/laravel.log',
+        'path' => 'C:\\wamp\\www\\doctors_aid\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/logs/laravel.log',
+        'path' => 'C:\\wamp\\www\\doctors_aid\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -729,7 +729,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/logs/laravel.log',
+        'path' => 'C:\\wamp\\www\\doctors_aid\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -778,14 +778,14 @@
     'from' => 
     array (
       'address' => NULL,
-      'name' => 'Doctors\'-Aid',
+      'name' => 'Laravel',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/resources/views/vendor/mail',
+        0 => 'C:\\wamp\\www\\doctors_aid\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -864,7 +864,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/framework/sessions',
+    'files' => 'C:\\wamp\\www\\doctors_aid\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -873,7 +873,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'doctors_aid_session',
+    'cookie' => 'laravel_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -884,9 +884,9 @@
   array (
     'paths' => 
     array (
-      0 => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/resources/views',
+      0 => 'C:\\wamp\\www\\doctors_aid\\resources\\views',
     ),
-    'compiled' => '/media/fuad/others/Codes/Innova_Tech/Doctors\'_Aid-Backend/storage/framework/views',
+    'compiled' => 'C:\\wamp\\www\\doctors_aid\\storage\\framework\\views',
   ),
   'flare' => 
   array (
