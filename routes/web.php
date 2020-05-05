@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/clear', ['as'=>'clear','uses'=>'IndexController@clear']);
+
 Route::get('/', ['as'=>'index','uses'=>'IndexController@index']);
 
 Auth::routes();
